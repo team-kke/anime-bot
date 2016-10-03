@@ -11,13 +11,14 @@ type PersonalAccessToken = String
 
 type Text = String
 type ImageURL = String
-type Message = (Text, ImageURL)
+type Message = (Text, Maybe ImageURL)
 
 personalAccessToken :: IO PersonalAccessToken
 personalAccessToken = getEnv "PERSONAL_ACCESS_TOKEN"
 
 body :: Message -> [FormParam]
-body (text, imageURL) =
+body (text, Nothing) = [ "message" := text ]
+body (text, Just imageURL) =
   [ "message" := text
   , "imageFullsize" := imageURL
   , "imageThumbnail" := imageURL
