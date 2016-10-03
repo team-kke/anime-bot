@@ -1,6 +1,6 @@
 name:                anime-bot
 version:             0.1.0.0
-synopsis:            anime bot pushing @alldne to work hard, written in Haskell
+synopsis:            A LINE Notify bot pushing @alldne to work hard
 description:         Please see README.md
 homepage:            https://github.com/team-kke/anime-bot
 license:             BSD3
