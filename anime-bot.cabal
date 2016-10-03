@@ -16,6 +16,8 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     GitHub
+  extensions:
+    OverloadedStrings
   build-depends:       base >= 4.7 && < 4.9
                      , github
                      , vector
