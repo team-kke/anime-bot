@@ -1,6 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module GitHub where
+module GitHub
+  ( didYouCommitToday
+  ) where
 
 import Data.Time.Clock
 import GitHub.Endpoints.Repos.Commits
@@ -10,10 +12,16 @@ import qualified Data.Vector as V
 
 commitsSince :: UTCTime -> IO (V.Vector Commit)
 commitsSince datetime =
-  commitsWithOptionsFor "team-kke" "anime" [CommitQuerySince datetime] >>=
+  commitsWithOptionsFor "team-kke" "anime" query >>=
     \result -> case result of
                  Left _ -> return V.empty
                  Right xs -> return xs
+  where
+    query =
+      [ CommitQuerySince datetime
+      , CommitQueryAuthor "anime@yuiazu.net"
+      , CommitQueryPath "docs/index.html"
+      ]
 
 didYouCommitToday :: IO Bool
 didYouCommitToday = do
