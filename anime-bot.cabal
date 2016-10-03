@@ -15,14 +15,19 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     GitHub
   extensions:
     OverloadedStrings
+  exposed-modules:
+    GitHub
+    LineNotify
   build-depends:       base >= 4.7 && < 4.9
                      , github
                      , vector
                      , text
                      , time
+                     , wreq
+                     , lens
+                     , bytestring
   default-language:    Haskell2010
 
 executable anime-bot
