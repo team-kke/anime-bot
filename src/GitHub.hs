@@ -9,11 +9,11 @@ import qualified Data.Vector as V
 (&) = flip fmap
 
 commitsSince :: UTCTime -> IO (V.Vector Commit)
-commitsSince datetime =
-  commitsWithOptionsFor "team-kke" "anime" query >>=
-    \result -> case result of
-                 Left _ -> return V.empty
-                 Right xs -> return xs
+commitsSince datetime = do
+  result <- commitsWithOptionsFor "team-kke" "anime" query
+  case result of
+    Left _ -> return V.empty
+    Right xs -> return xs
   where
     query =
       [ CommitQuerySince datetime
