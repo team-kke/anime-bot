@@ -33,10 +33,10 @@ Please issue a personal access token from [LINE Notify](https://notify-bot.line.
 ## Todo
 
 - [x] Basic GitHub query
-- [ ] Specify the query using author and path
-- [ ] Read a personal access token from env
+- [x] Specify the query using author and path
+- [x] Read a personal access token from env
 - [ ] Generate random text and image
-- [ ] Send LINE messages when *someone* is lazy(or possibly hard-working)
+- [x] Send LINE messages when *someone* is lazy(or possibly hard-working)
 - [ ] Set crontab on a *free* server :pizza:
 
 ## License
