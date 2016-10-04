@@ -4,14 +4,11 @@ module LineNotify
 
 import Control.Lens
 import Data.ByteString.Char8
+import LineNotify.Type
 import Network.Wreq
 import System.Environment
 
 type PersonalAccessToken = String
-
-type Text = String
-type ImageURL = String
-type Message = (Text, Maybe ImageURL)
 
 personalAccessToken :: IO PersonalAccessToken
 personalAccessToken = getEnv "PERSONAL_ACCESS_TOKEN"

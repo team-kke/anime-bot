@@ -20,6 +20,7 @@ library
   exposed-modules:
     GitHub
     LineNotify
+    LineNotify.Type
   build-depends:       base >= 4.7 && < 4.9
                      , github
                      , vector
