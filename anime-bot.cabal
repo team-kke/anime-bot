@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  extensions:
+  default-extensions:
     OverloadedStrings
   exposed-modules:
     GitHub
