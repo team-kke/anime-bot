@@ -35,7 +35,7 @@ Please issue a personal access token from [LINE Notify](https://notify-bot.line.
 - [x] Basic GitHub query
 - [x] Specify the query using author and path
 - [x] Read a personal access token from env
-- [ ] Generate random text and image
+- [x] Generate random text and image
 - [x] Send LINE messages when *someone* is lazy(or possibly hard-working)
 - [ ] Set crontab on a *free* server :pizza:
 
