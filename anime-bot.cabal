@@ -21,6 +21,7 @@ library
     GitHub
     LineNotify
     LineNotify.Type
+    Random
   build-depends:       base >= 4.7 && < 4.9
                      , github
                      , vector
@@ -29,6 +30,7 @@ library
                      , wreq
                      , lens
                      , bytestring
+                     , random
   default-language:    Haskell2010
 
 executable anime-bot
