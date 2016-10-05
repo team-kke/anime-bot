@@ -30,14 +30,14 @@ $ anime-bot
 
 Please issue a personal access token from [LINE Notify](https://notify-bot.line.me).
 
-## Todo
+## Features
 
-- [x] Basic GitHub query
-- [x] Specify the query using author and path
-- [x] Read a personal access token from env
-- [x] Generate random text and image
-- [x] Send LINE messages when *someone* is lazy(or possibly hard-working)
-- [ ] Set crontab on a *free* server :pizza:
+- Check if there's any update on [team-kke/anime](https://github.com/team-kke/anime) today
+- Send a LINE message when *someone* is lazy(or possibly hard-working)
+  - The message may be chosen at [random](src/Messages.hs)
+  - The message may vary for *someone*'s diligence
+  - The message may include a cute pic to encourage *the one*
+- It's running on *the free server* :pizza:
 
 ## License
 
